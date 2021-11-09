@@ -17,9 +17,8 @@ function App() {
       <header className="App-header">
         <h1>Luke APIWalker</h1>
         <Link to='/'>Home</Link>
-        <Link to='/about'>About</Link>
       </header>
-      <Switch>
+      <Switch className="starWars">
 
         <Route exact path="/" >
         <Search>

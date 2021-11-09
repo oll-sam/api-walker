@@ -6,7 +6,7 @@ const Search = () =>{
     const [option, setOption] = useState("");
     const [id, setId] = useState("");
     const [starWars, setStarWars] = useState([]);
-    const history = useHistory()
+    const history = useHistory();
     const {name} = useParams();
 
     const getStarWars = (e) => {
@@ -15,13 +15,14 @@ const Search = () =>{
     }
 
     return(
-    <form onSubmit={getStarWars}>
+    <form className="starWars" onSubmit={getStarWars}>
         <label>Search for:</label>
         <select onChange={(e) => setOption(e.target.value)}>
+        <option value="select Resource" selected disabled hidden>Select Resource</option>
         <option value="people">People</option>
         <option value="planets">Planet</option>
         </select>
-        <label>ID:</label>
+        <label className="stars">ID:</label>
         <input type="text" onChange={(e) => setId(e.target.value)}/>
         <button type="submit">Search</button>
     </form>
